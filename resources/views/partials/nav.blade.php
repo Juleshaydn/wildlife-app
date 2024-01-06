@@ -1,16 +1,16 @@
 {{-- resources/views/partials/nav.blade.php --}}
 
-<nav class="bg-blue-800 p-4 shadow-lg">
-    <div class="container mx-auto">
-        <ul class="flex items-center justify-center space-x-4">
-            <li>
-                <a href="{{ route('home') }}" class="text-white hover:text-blue-300 font-semibold">Home</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="{{ route('home') }}" class="nav-link text-white">Home</a>
             </li>
-            <li>
-                <a href="{{ route('animals.index') }}" class="text-white hover:text-blue-300 font-semibold">Animals</a>
+            <li class="nav-item">
+                <a href="{{ route('animals.index') }}" class="nav-link text-white">Animals</a>
             </li>
-            <li>
-                <a href="{{ route('info') }}" class="text-white hover:text-blue-300 font-semibold">Info</a>
+            <li class="nav-item">
+                <a href="{{ route('info') }}" class="nav-link text-white">Info</a>
             </li>
         </ul>
     </div>

@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet"> <!-- Ensure this path is correct -->
     <title>Animals List</title>
-    <!-- Ensure you've included Tailwind CSS link here -->
 </head>
 <body class="bg-gray-100">
-    @include('partials.nav')
+    @include('partials.nav') <!-- Ensure your navigation is styled or has Tailwind classes -->
     <div class="container mx-auto px-4">
         <h1 class="text-2xl font-bold text-gray-800 my-6">Animals List</h1>
         <ul class="bg-white rounded shadow-md p-6">
