@@ -28,6 +28,7 @@
                     <h2 class="text-xl font-semibold text-gray-800">{{ $event->name }}</h2>
                     <p class="text-sm text-gray-600">Date: {{ $event->date }} | Time: {{ $event->time }}</p>
                     <p class="text-sm text-gray-600">Location: {{ $event->location }}</p>
+                    <p class="text-sm text-gray-600">Description: {{ $event->description }}</p>
                     <p class="text-sm text-gray-600">Price: ${{ number_format($event->price, 2) }}</p>
                 </div>
             @empty
