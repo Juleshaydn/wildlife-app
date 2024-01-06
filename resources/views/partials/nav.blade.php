@@ -10,6 +10,9 @@
                 <a href="{{ route('animals.index') }}" class="nav-link text-white hover:text-blue-200">Animals</a>
             </li>
             <li class="nav-item mr-6">
+                <a href="{{ route('events') }}" class="nav-link text-white hover:text-blue-200">Events</a>
+            </li>
+            <li class="nav-item mr-6">
                 <a href="{{ route('info') }}" class="nav-link text-white hover:text-blue-200">Info</a>
             </li>
         </ul>

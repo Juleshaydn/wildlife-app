@@ -21,13 +21,35 @@
 
     <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <!-- Replace with your content -->
-            <div class="px-4 py-6 sm:px-0">
-                <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-                    <!-- The rest of your homepage content -->
+            <!-- Featured Animals -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Featured Animals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    @foreach ($randomAnimals as $animal)
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold text-gray-800">{{ $animal->name }}</h3>
+                            <!-- Add more animal details here if needed -->
+                        </div>
+                    @endforeach
                 </div>
+                <a href="{{ route('animals.index') }}" class="text-blue-600 hover:underline">View all animals</a>
             </div>
-            <!-- /End replace -->
+
+            <!-- Upcoming Events -->
+            <div>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Events</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    @foreach ($upcomingEvents as $event)
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-bold text-gray-800">{{ $event->name }}</h3>
+                            <p>Date: {{ $event->date }}</p>
+                            <p>Time: {{ $event->time }}</p>
+                            <!-- Add more event details here if needed -->
+                        </div>
+                    @endforeach
+                </div>
+                <a href="{{ route('events') }}" class="text-blue-600 hover:underline">View all events</a>
+            </div>
         </div>
     </main>
 </body>

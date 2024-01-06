@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::get('/dbconn', function() {
 });
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 Route::get('/info', [InfoController::class, 'index'])->name('info');
+Route::get('/events', [EventsController::class, 'index'])->name('events');
 
 
