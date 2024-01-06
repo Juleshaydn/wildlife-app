@@ -9,18 +9,18 @@
     <title>Information Page</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gray-100">
+<body class="bg-green-50 text-gray-800">
     @include('partials.nav') <!-- Ensure your navigation is styled or has Tailwind classes -->
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Information Page</h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">About Jem Wildlife Centre</h1>
         <div class="bg-white rounded-lg shadow p-6">
-            <p class="text-gray-600 mb-4">This is your information page where you can share details about your site, company, or provide users with helpful information.</p>
-            <p class="text-gray-600">Feel free to structure this page according to your content needs. Here are a few ideas on what you might include:</p>
+            <p class="text-gray-600 mb-4">Jem Wildlife Centre is based near Penkridge in Staffordshire, that cares for British wild animals that have been rescued. Their mission is to help sick, injured, and orphaned wildlife, either by rehabilitating and returning them back into the wild or by providing a life-long home to those who would not survive in the wild.</p>
+            <p class="text-gray-600">Here are a few key aspects of our mission:</p>
             <ul class="list-disc pl-5 mt-4 text-gray-600">
-                <li>About your site or company</li>
-                <li>Contact information</li>
-                <li>Helpful resources and links</li>
-                <li>Frequently asked questions</li>
+                <li>Rehabilitation of injured and orphaned wildlife</li>
+                <li>Education and outreach to promote wildlife conservation</li>
+                <li>Research and monitoring of local wildlife populations</li>
+                <li>Providing a sanctuary for non-releasable animals</li>
             </ul>
         </div>
     </div>
