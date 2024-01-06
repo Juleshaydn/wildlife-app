@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Events;
 use Illuminate\Http\Request;
+use App\Models\Event; // Import your Event model
 
-class EventsController extends Controller {
-    public function index() {
-        $events = Events::all(['id', 'name']); // Fetch only the id and name
-        return view('events', compact('events')); // Pass the animals to the view
+class EventsController extends Controller
+{
+    public function showEvents(Request $request) {
+        $query = Event::query();
+
+        // If a search term is provided, filter the events
+        if ($request->has('search') && $request->search != '') {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        $events = $query->orderBy('date', 'asc')->get();
+
+        return view('events', ['events' => $events]);
     }
-    
 }
-
-
-
-

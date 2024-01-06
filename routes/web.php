@@ -23,6 +23,7 @@ Route::get('/dbconn', function() {
 });
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
 Route::get('/info', [InfoController::class, 'index'])->name('info');
-Route::get('/events', [EventsController::class, 'index'])->name('events');
+Route::get('/events', [EventsController::class, 'showEvents'])->name('events');
+
 
 

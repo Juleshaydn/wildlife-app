@@ -10,9 +10,17 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    @include('partials.nav') <!-- Ensure your navigation is styled or has Tailwind classes -->
+    @include('partials.nav')
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Upcoming Events</h1>
+
+        <!-- Search Form -->
+        <form method="GET" action="{{ route('events') }}" class="mb-6">
+    <div class="flex items-center">
+        <input type="text" name="search" placeholder="Search events..." class="px-4 py-2 w-full rounded-l-lg border" value="{{ request('search') }}">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg">Search</button>
+    </div>
+</form>
 
         <div class="bg-white rounded-lg shadow overflow-hidden">
             @forelse ($events as $event)
