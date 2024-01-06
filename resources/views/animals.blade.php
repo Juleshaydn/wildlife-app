@@ -17,9 +17,16 @@
             <ul>
                 @forelse ($animals as $animal)
                     <li class="px-4 py-5 border-b border-gray-200">
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm font-medium text-gray-600">ID: {{ $animal->id }}</span>
-                            <span class="text-lg text-gray-800">{{ $animal->name }}</span>
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <!-- Animal Image -->
+                            <div class="mb-4 md:mb-0 md:mr-4">
+                                <img src="data:image/jpeg;base64,{{ base64_encode($animal->img) }}" alt="{{ $animal->name }}" class="w-32 h-32 object-cover rounded-full">
+                            </div>
+                            <!-- Animal Details -->
+                            <div class="flex-1">
+                                <h2 class="text-xl font-semibold text-gray-800">{{ $animal->name }}</h2>
+                                <p class="text-sm text-gray-600">{{ $animal->description }}</p>
+                            </div>
                         </div>
                     </li>
                 @empty

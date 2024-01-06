@@ -21,19 +21,26 @@
 
     <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <!-- Featured Animals -->
-            <div class="mb-8">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Featured Animals</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    @foreach ($randomAnimals as $animal)
-                        <div class="bg-white p-6 rounded-lg shadow">
-                            <h3 class="text-xl font-bold text-gray-800">{{ $animal->name }}</h3>
-                            <!-- Add more animal details here if needed -->
-                        </div>
-                    @endforeach
+<!-- Featured Animals -->
+<div class="mb-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Featured Animals</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        @foreach ($randomAnimals as $animal)
+            <div class="bg-white p-6 rounded-lg shadow">
+                <!-- Animal Image -->
+                <div class="mb-4">
+                    <img src="data:image/jpeg;base64,{{ base64_encode($animal->img) }}" alt="{{ $animal->name }}" class="w-full h-48 object-cover rounded-lg">
                 </div>
-                <a href="{{ route('animals.index') }}" class="text-blue-600 hover:underline">View all animals</a>
+                <!-- Animal Name -->
+                <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $animal->name }}</h3>
+                <!-- Animal Description -->
+                <p class="text-gray-600">{{ $animal->description }}</p>
             </div>
+        @endforeach
+    </div>
+    <a href="{{ route('animals.index') }}" class="text-blue-600 hover:underline">View all animals</a>
+</div>
+
 
             <!-- Upcoming Events -->
             <div>
