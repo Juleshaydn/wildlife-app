@@ -26,4 +26,3 @@ Route::get('/info', [InfoController::class, 'index'])->name('info');
 Route::get('/events', [EventsController::class, 'showEvents'])->name('events');
 
 
-
