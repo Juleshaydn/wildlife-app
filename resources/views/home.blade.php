@@ -24,7 +24,7 @@
 
     <main>
         <div class="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">
-            <!-- Featured Animals -->
+            <!-- 3 random animals -->
             <section class="mb-12">
                 <h2 class="text-3xl font-semibold text-gray-800 mb-6">Featured Animals</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -53,7 +53,6 @@
                             <h3 class="text-xl font-bold text-gray-800">{{ $event->name }}</h3>
                             <p class="text-sm text-gray-600">Date: {{ $event->date }}</p>
                             <p class="text-sm text-gray-600">Time: {{ $event->time }}</p>
-                            <!-- Add more event details here if needed -->
                         </div>
                     @endforeach
                 </div>
